@@ -1,0 +1,11 @@
+services:
+  uptime-push:
+    image: uptime-push:local
+    container_name: uptime-push
+    restart: always
+    environment:
+      # REQUIRED — set this per‑deployment
+      PUSH_URL: "uptime-url-here"
+      
+      # OPTIONAL — defaults to 30 if not set
+      INTERVAL: "30"
