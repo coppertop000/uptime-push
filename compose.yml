@@ -1,11 +1,12 @@
 services:
   uptime-push:
-    image: uptime-push:local
+    build: .
     container_name: uptime-push
     restart: always
     environment:
-      # REQUIRED — set this per‑deployment
+      # Set your Uptime Kuma push URL here
       PUSH_URL: "uptime-url-here"
-      
-      # OPTIONAL — defaults to 30 if not set
+
+      # Optional: heartbeat interval (seconds)
       INTERVAL: "30"
+
